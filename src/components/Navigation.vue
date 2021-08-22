@@ -18,7 +18,12 @@ nav.nav
     span.nav__search-text Search
     img.nav__search-image(src="../assets/icons/magnifier.png")
 
-  .nav__profile 
+  .nav__profile
+    .nav__profile-info
+      p.nav__profile-text-name Abby Anderson
+      p.nav__profile-logout Logout
+    .nav__profile-picture 
+      img.profile-image(src="../assets/profile_picture.png")
 </template>
 
 <script>
@@ -90,6 +95,7 @@ export default {
 
     font-size: 1.6rem;
   }
+
   &__search-container {
     position: relative;
   }
@@ -100,9 +106,42 @@ export default {
   }
 
   &__profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 70px;
     width: 231px;
-    background-color: red;
+
+    &-info {
+      // background-color: green;
+
+      height: 46px;
+
+      text-align: left;
+      font-size: 1.8rem;
+      padding-left: 20px;
+    }
+
+    &-text-name {
+      font-weight: bold;
+    }
+
+    &-logout {
+      text-align: right;
+      opacity: 0.5;
+      padding-top: 0px;
+    }
+
+    &-picture {
+      // background-color: yellow;
+      flex-basis: 70px;
+      height: 70px;
+      // margin-left: 50px;
+      border-radius: 50%;
+    }
+    &-image {
+      // display: block;
+    }
   }
 }
 </style>
