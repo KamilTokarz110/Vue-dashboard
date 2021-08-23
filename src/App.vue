@@ -1,6 +1,6 @@
 <template lang="pug">
-.wrapper
-  Header
+.container
+  //- Header
   Section_main
 </template>
 
@@ -19,16 +19,5 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: stretch;
 
-  margin: 0 80px;
-  max-width: 1780px;
-  min-height: 100vh;
-}
-</style>
 
