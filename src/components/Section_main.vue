@@ -63,7 +63,41 @@
       i.fas.fa-chevron-right
     ul.card--calendar__list
       li.card--calendar__item(v-for="day in days") {{ i++ }}
-  .card.card--todays-shipments todays-shipments
+  .card.card--todays-shipments
+    h3.card--todays-shipments__title Todays shipments
+    h2.card--todays-shipments__title 1332.32 TON
+    .card--todays-shipments__hours
+      p.card--todays-shipments__hour 9 AM
+      p.card--todays-shipments__hour 10 AM
+      p.card--todays-shipments__hour 11 AM
+      p.card--todays-shipments__hour 12 AM
+      p.card--todays-shipments__hour 1 PM
+      p.card--todays-shipments__hour 2 PM
+      p.card--todays-shipments__hour 3 PM
+      p.card--todays-shipments__hour 4 PM
+      p.card--todays-shipments__hour 5 PM
+
+    .card--todays-shipments__item
+      .card--todays-shipments__item-color.card--todays-shipments__item-color--1
+    .card--todays-shipments__item
+      .card--todays-shipments__item-color.card--todays-shipments__item-color--2
+    .card--todays-shipments__item
+      .card--todays-shipments__item-color.card--todays-shipments__item-color--3
+    .card--todays-shipments__item
+      .card--todays-shipments__item-color.card--todays-shipments__item-color--4
+    .card--todays-shipments__legend
+      .card--todays-shipments__legend-item
+        .card--todays-shipments__legend-item-color.card--todays-shipments__legend-item-color--1
+        p.card--todays-shipments__legend-item-text Less Than Truckload
+      .card--todays-shipments__legend-item
+        .card--todays-shipments__legend-item-color.card--todays-shipments__legend-item-color--2
+        p.card--todays-shipments__legend-item-text Intermodal
+      .card--todays-shipments__legend-item
+        .card--todays-shipments__legend-item-color.card--todays-shipments__legend-item-color--3
+        p.card--todays-shipments__legend-item-text Volume LTL
+      .card--todays-shipments__legend-item
+        .card--todays-shipments__legend-item-color.card--todays-shipments__legend-item-color--4
+        p.card--todays-shipments__legend-item-text Expedited
   .card.card--current-shipment
     h3.card--current-shipment__title Current Shipment
     .card--current-shipment__item

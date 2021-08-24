@@ -283,12 +283,12 @@ html {
     padding: 20px 20px;
 
     @include md {
-        background-color: red;
+        // background-color: red;
         flex-basis: calc((100% /12) * 6 - #{$flex-gap});
     }
 
     @include lg {
-        background-color: yellowgreen;
+        // background-color: yellowgreen;
         flex-basis: calc((100% /12) * 6 - #{$flex-gap});
     }
 
@@ -432,6 +432,7 @@ html {
             color: white;
             text-align: left;
             padding-top: 10px;
+            font-size: 1.6rem;
         }
 
         &__item {
@@ -495,6 +496,7 @@ html {
         &__title {
             color: #FFFFFF;
             flex-basis: 50%;
+            font-size: 1.6rem;
 
         }
 
@@ -612,6 +614,162 @@ html {
     }
 
     &--todays-shipments {
+        display: flex;
+        flex-wrap: wrap;
+
+
+
+
+
+
+        gap: 10px 0px;
+        color: $nav-font-color;
+
+        &__title {
+            flex-basis: 100%;
+            font-size: 1.6rem;
+
+            &:nth-child(2) {
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+        }
+
+        &__hours {
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+
+            // gap: 5px;
+
+            text-align: center;
+        }
+
+        &__hour {
+            font-weight: bold;
+            // font-size: 1.1rem;
+        }
+
+        &__item {
+            position: relative;
+            // background-color: red;
+            flex-basis: 100%;
+            height: 20px;
+
+
+
+
+
+            &-color {
+                position: absolute;
+                width: 20%;
+                height: 100%;
+                background: #C5A3D9 0% 0% no-repeat padding-box;
+                border-radius: 4px;
+                opacity: 1;
+
+                &--1 {
+                    width: 25%;
+                    background-color: #C5A3D9;
+                }
+
+                &--2 {
+                    left: 10%;
+                    width: 50%;
+                    background-color: #FF9D97;
+                }
+
+                &--3 {
+                    left: 35%;
+                    width: 65%;
+                    background-color: #70FCBF;
+                }
+
+                &--4 {
+                    left: 10%;
+                    width: 80%;
+                    background-color: #F3D661;
+                }
+            }
+
+
+
+            // &:nth-child(4) {
+
+
+            //     background-color: #C5A3D9;
+            // }
+
+            // &:nth-child(5) {
+
+            //     background-color: #FF9D97;
+            // }
+
+            // &:nth-child(6) {
+
+            //     background-color: #70FCBF;
+            // }
+
+            // &:nth-child(7) {
+
+            //     background-color: #F3D661;
+            // }
+        }
+
+        &__legend {
+            // background-color: yellow;
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+
+
+            &-item {
+                display: flex;
+                gap: 10px;
+
+                &-text {
+                    font-size: 1.2rem;
+                    color: $nav-font-color;
+                    font-weight: bold;
+                }
+
+                &-color {
+                    width: 12px;
+                    height: 12px;
+
+                    background: #C5A3D9 0% 0% no-repeat padding-box;
+                    border-radius: 8px;
+                    opacity: 1;
+
+                    &--1 {
+                        background-color: #C5A3D9;
+                        ;
+                    }
+
+                    &--2 {
+                        background-color: #FF9D97;
+                    }
+
+                    &--3 {
+                        background-color: #70FCBF;
+                    }
+
+                    &--4 {
+                        background-color: #F3D661;
+                    }
+                }
+            }
+
+        }
+
         @include md {
             flex-basis: calc((100% / 12) * 8 - #{$flex-gap});
         }
@@ -627,7 +785,7 @@ html {
         flex-wrap: wrap;
         // background-color: red;
 
-        font-size: 1.4rem;
+        // font-size: 1.4rem;
 
         gap: 20px;
 
@@ -638,6 +796,7 @@ html {
             color: $nav-font-color;
 
             font-weight: bold;
+            font-size: 1.6rem;
         }
 
         &__item {
@@ -653,15 +812,28 @@ html {
             border-radius: 10px;
             color: #D88787;
 
-            &-title {
+
+
+            .card--current-shipment-title {
+                font-size: 1.4rem;
                 font-weight: normal;
+
             }
 
+
+
+            strong {
+                display: block;
+                font-size: 1.6rem;
+                margin-top: 5px;
+            }
 
             &:nth-child(3) {
                 background: transparent linear-gradient(49deg, #EDECFF 70%, #736F9F 100%) 0% 0% no-repeat padding-box;
                 border: 1px solid #C9C7EB;
                 color: #1A0CE2;
+
+
 
             }
 
