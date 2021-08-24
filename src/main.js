@@ -9,6 +9,7 @@ import '@fortawesome/fontawesome-free/js/all.js'
 Vue.config.productionTip = false
 
 new Vue({
+  
   store,
   // scss,
   render: h => h(App)

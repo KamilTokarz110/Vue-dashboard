@@ -61,8 +61,10 @@
       i.fas.fa-chevron-left
       p.calendar__year 2021
       i.fas.fa-chevron-right
+    <hr>
     ul.card--calendar__list
-      li.card--calendar__item(v-for="day in days") {{ i++ }}
+      li.card--calendar__item(v-for="(day, index) in days", :key="index") {{ day }}
+
   .card.card--todays-shipments
     h3.card--todays-shipments__title Todays shipments
     h2.card--todays-shipments__title 1332.32 TON
@@ -122,8 +124,13 @@
 import Card from "./Card.vue";
 export default {
   name: "Section_main",
+
   components: {
     Card,
+  },
+
+  data() {
+    return { days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] };
   },
 };
 </script>
