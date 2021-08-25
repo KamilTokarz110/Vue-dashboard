@@ -1,8 +1,8 @@
 <template lang="pug">
 .section__main
   .card.card--track-order
-    h3.card--track-order__title.card--track-order__title--md Track
-    h2.card--track-order__title.card--track-order__title--bg Order
+    h3.card--track-order__title.card--track-order__title--md Track<br><strong class="card--track-order__title card--track-order__title--bg">Order</strong>
+    //- h2.card--track-order__title.card--track-order__title--bg Order
 
     .card--track-order__item
       p.card--track-order__text Tracking ID
@@ -20,14 +20,17 @@
   .card.card--bids
     img.card--bids__image(src="../assets/bids_logo.svg")
     h2.card--bids__title Naughty<br>Dog
-    .card--bids__item
-      img.card--bids__item-icon(src="../assets/auction.svg")
-      p.card--bids__item-text Bids Available
-      .card--bids__item-circle 17
-    .card--bids__item
-      img.card--bids__item-icon(src="../assets/auction--closed.svg")
-      p.card--bids__item-text Bids Closed
-      .card--bids__item-circle 07
+    .card--bids__bottom
+      .card--bids__item
+        i.fas.fa-lock-open.card--bids__item-icon
+        //- img.card--bids__item-icon(src="../assets/auction.svg")
+        p.card--bids__item-text Bids Available
+        .card--bids__item-circle 17
+      .card--bids__item
+        i.fas.fa-lock.card--bids__item-icon
+        //- img.card--bids__item-icon(src="../assets/auction--closed.svg")
+        p.card--bids__item-text Bids Closed
+        .card--bids__item-circle 07
 
   .card.card--statistics
     h3.card--statistics__title Statistics
@@ -59,9 +62,9 @@
   .card.card--calendar 
     .card--calendar__header
       i.fas.fa-chevron-left
-      p.calendar__year 2021
+      p.card--calendar__year August 2021
       i.fas.fa-chevron-right
-    <hr>
+    .line
     ul.card--calendar__list
       li.card--calendar__item(v-for="(day, index) in days", :key="index") {{ day }}
       li.card--calendar__item.card--calendar__item--day(v-for="n in 30") {{ n }}
@@ -112,7 +115,7 @@
       h3.card--current-shipment-title Cash <br> <strong>Chole Frazer Package</strong>
     .card--current-shipment__item
       img.card--current-shipment__image(src="../assets/files.svg")
-      a.card--current-shipment-title Upload documents
+      a.card--current-shipment__link Upload documents
   .card.card--cargo-shipment cargo-shipment
 </template>
 

@@ -44,7 +44,7 @@ export default {
   flex-basis: 100%;
 
   margin: 20px 0px 30px 0px;
-  padding: 10px 10px;
+  padding: 10px 20px;
 
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 10px 20px #c4c8d066;

@@ -14,6 +14,7 @@ $contents: (xs: $content-xs, sm: $content-sm, md: $content-md, lg: $content-lg, 
 	padding-left: $gutter-xs;
 	padding-right: $gutter-xs;
 
+
 	@each $breakpoint in $breakpoints {
 		@include rwd(map-get($screens, #{$breakpoint})) {
 			max-width: map-get($contents, #{$breakpoint});
@@ -65,8 +66,8 @@ $contents: (xs: $content-xs, sm: $content-sm, md: $content-md, lg: $content-lg, 
 	margin-right: 0;
 	margin-left: 0;
 
-	> .col,
-	> [class*="col-"] {
+	>.col,
+	>[class*="col-"] {
 		padding-right: 0;
 		padding-left: 0;
 	}
