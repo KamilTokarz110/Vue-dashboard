@@ -64,20 +64,16 @@
     <hr>
     ul.card--calendar__list
       li.card--calendar__item(v-for="(day, index) in days", :key="index") {{ day }}
+      li.card--calendar__item.card--calendar__item--day(v-for="n in 30") {{ n }}
 
   .card.card--todays-shipments
     h3.card--todays-shipments__title Todays shipments
     h2.card--todays-shipments__title 1332.32 TON
     .card--todays-shipments__hours
-      p.card--todays-shipments__hour 9 AM
-      p.card--todays-shipments__hour 10 AM
-      p.card--todays-shipments__hour 11 AM
-      p.card--todays-shipments__hour 12 AM
-      p.card--todays-shipments__hour 1 PM
-      p.card--todays-shipments__hour 2 PM
-      p.card--todays-shipments__hour 3 PM
-      p.card--todays-shipments__hour 4 PM
-      p.card--todays-shipments__hour 5 PM
+      p.card--todays-shipments__hour(
+        v-for="(hour, index) in hours",
+        :key="index"
+      ) {{ hour }}
 
     .card--todays-shipments__item
       .card--todays-shipments__item-color.card--todays-shipments__item-color--1
@@ -130,7 +126,21 @@ export default {
   },
 
   data() {
-    return { days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] };
+    return {
+      days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+
+      hours: [
+        "9 AM",
+        "10 AM",
+        "11 AM",
+        "12 AM",
+        "1 PM",
+        "2 PM",
+        "3 PM",
+        "4 PM",
+        "5 PM",
+      ],
+    };
   },
 };
 </script>
