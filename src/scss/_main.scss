@@ -8,7 +8,10 @@ html {
 .container {
     @include lg {
         max-width: 1800px;
+
     }
+
+
 
 }
 
@@ -267,7 +270,7 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     // align-items: center;
     // min-height: 100vh;
     // background-color: red;
@@ -335,12 +338,22 @@ html {
                 right: 20px;
             }
 
+
+
             @include lg {
+
+
                 width: 200px;
                 height: 200px;
                 right: 20px;
                 top: 20px;
             }
+
+            @media(max-width: 1180px) {
+
+                top: 30px;
+            }
+
         }
 
 

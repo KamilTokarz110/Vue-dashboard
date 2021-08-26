@@ -18,7 +18,7 @@ nav.nav
     li.nav__item 
       a.nav__link Reports
   .nav__search-container 
-    input.nav__search(type="search", name="search", placeholder="")
+    input.nav__search(type="search", name="search", placeholder="Search")
 
     img.nav__search-image(src="../assets/icons/magnifier.png")
 
@@ -192,10 +192,34 @@ export default {
       line-height: 24px;
       text-align: left;
     }
+    &__link {
+      position: relative;
+      display: block;
+      transition: 0.2s;
+      &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: $active-color;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      &:hover:after {
+        width: 100%;
+        left: 0;
+      }
+    }
 
     &__search {
-      display: block;
+      display: flex;
       // position: relative;
+      align-items: center;
+      justify-content: center;
+
       height: 45px;
       width: 452px;
 
@@ -205,17 +229,13 @@ export default {
       border: 1px solid #aab6cc;
       border-radius: 7px;
       opacity: 1;
-    }
-
-    &__search-text {
-      display: block;
-      position: absolute;
-      // top: 22px;
-      left: 53px;
-      bottom: 13px;
-      text-align: left;
-
-      font-size: 1.6rem;
+      &::placeholder {
+        display: block;
+        font-size: 1.6rem;
+        color: $nav-font-color;
+        opacity: 1;
+        padding: 20px 15px 20px 50px;
+      }
     }
 
     &__search-container {
@@ -231,17 +251,14 @@ export default {
     }
 
     &__profile {
-      display: block;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 70px;
-      width: 231px;
-      gap: 10px;
+
+      gap: 15px;
 
       &-info {
         display: block;
-        // background-color: green;
 
         height: 46px;
 
