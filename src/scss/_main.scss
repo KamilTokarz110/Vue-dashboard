@@ -5,7 +5,12 @@ html {
 }
 
 
+.container {
+    @include lg {
+        max-width: 1800px;
+    }
 
+}
 
 
 // .wrapper {
@@ -262,7 +267,7 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     // align-items: center;
     // min-height: 100vh;
     // background-color: red;
@@ -417,8 +422,7 @@ html {
             flex-basis: calc((100% / 12) * 7 - #{$flex-gap});
             background-position: 90% 10%;
             background-size: 40% auto;
-            gap: 10px;
-            justify-content: center;
+
 
             &__text {
                 flex-basis: 100%;
@@ -433,14 +437,12 @@ html {
             }
 
             &__title {
-                flex-basis: 100%;
-                color: $nav-font-color;
+
                 margin-bottom: 10px;
 
                 &--bg {
-                    display: block;
-                    font-weight: bold;
-                    font-size: 2rem;
+
+
                     margin-top: 5px;
                 }
 
@@ -449,55 +451,25 @@ html {
 
 
 
-            &__item {
-                display: flex;
-                align-items: center;
-                flex-basis: 100%;
 
-
-                border: 1px solid #aab6cc;
-                border-radius: 7px;
-                opacity: 1;
-                height: 38px;
-
-
-
-
-
-
-            }
 
             &__text {
-                flex-basis: 100%;
 
-
-                line-height: 38px;
-                font-weight: bold;
-                text-align: center;
 
                 font-size: 1.2rem;
                 opacity: 0.5;
 
                 &:nth-child(2) {
-                    border-right: 2px solid #aab6cc;
-                    border-left: 2px solid #aab6cc;
+
                     line-height: 38px;
 
                 }
 
-                &:nth-child(1) {
-                    color: $active-color;
-                    opacity: 1;
-                }
+
             }
 
             &__input-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                // position: relative;
-                flex-basis: 100%;
-                gap: 10px;
+
 
                 @media (min-width: 425px) {
                     justify-content: space-between;
@@ -505,16 +477,7 @@ html {
                 }
             }
 
-            &__input {
-                flex-basis: 100%;
-                height: 25px;
 
-                background: #ffffff 0% 0% no-repeat padding-box;
-                border: 1px solid #aab6cc;
-                border-radius: 7px;
-                opacity: 1;
-                padding: 20px 20px;
-            }
         }
 
         @include lg {
@@ -535,7 +498,7 @@ html {
         padding: 20px 20px;
 
         &__image {
-
+            align-self: flex-start;
             // flex-basis: 30%;
         }
 
@@ -599,8 +562,22 @@ html {
 
 
         @include md {
-            background-color: red;
+            // background-color: red;
             flex-basis: calc((100% /12) * 5 - #{$flex-gap});
+
+            &__item {
+                font-size: 1.4rem;
+
+                &-circle {
+                    font-size: 1.6rem;
+                }
+            }
+
+            &__item-icon {
+
+                font-size: 1.8rem;
+            }
+
         }
 
         @include lg {
@@ -618,7 +595,7 @@ html {
 
         gap: 20px 0px;
         font-size: 1.4rem;
-        padding: 25px 25px 45px 25px;
+        padding: 5px 25px 45px 25px;
 
         &__title {
             color: #FFFFFF;
@@ -739,11 +716,13 @@ html {
         color: $nav-font-color;
 
         .line {
-            gap: 10px;
+            // gap: 24px;
             flex-basis: 100%;
             height: 1px;
             background: transparent linear-gradient(270deg, #FFFFFF 0%, #B1B7BC 51%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
             opacity: 1;
+            margin-top: 12px;
+            margin-bottom: 6px;
         }
 
         &__header {
@@ -751,7 +730,7 @@ html {
             align-items: center;
             justify-content: center;
 
-            gap: 10px;
+            gap: 40px;
             flex-basis: 100%;
             font-weight: bold;
 
@@ -807,6 +786,11 @@ html {
 
         @include md {
             flex-basis: calc((100% / 12) * 6 - #{$flex-gap});
+
+            &__year {
+                font-size: 1.6rem;
+                color: $active-color;
+            }
         }
 
         @include lg {
@@ -830,11 +814,14 @@ html {
             flex-basis: 100%;
             font-size: 1.6rem;
 
-            &:nth-child(2) {
-                font-size: 1.8rem;
-                font-weight: bold;
+            &--big {
+                font-size: 2rem;
+                font-weight: bolder;
+
             }
+
         }
+
 
         &__hours {
 
@@ -972,12 +959,29 @@ html {
         }
 
         @include md {
-            flex-basis: calc((100% / 12) * 12 - #{$flex-gap});
+            flex-basis: 100%;
 
             &__legend {
                 justify-content: space-between;
             }
+
+            font-size: 1.2rem;
         }
+
+        &__title {
+            flex-basis: 100%;
+            font-size: 1.6rem;
+
+            &--big {
+                position: relative;
+                font-size: 2rem;
+                font-weight: bold;
+
+
+            }
+
+        }
+
 
         @include lg {
             flex-basis: calc((100% / 12) * 4 - #{$flex-gap});
@@ -1002,6 +1006,10 @@ html {
 
             font-weight: bold;
             font-size: 1.6rem;
+
+            &--big {
+                border: solid #707070 1px;
+            }
         }
 
         &__item {
@@ -1107,7 +1115,7 @@ html {
 
                 padding: 10px 10px;
 
-                ;
+
 
 
             }
@@ -1115,7 +1123,7 @@ html {
 
         @include lg {
             flex-basis: calc((100% / 12) * 8 - #{$flex-gap});
-            flex-basis: 50%;
+            // flex-basis: 50%;
         }
     }
 

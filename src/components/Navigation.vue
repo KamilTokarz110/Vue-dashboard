@@ -125,6 +125,21 @@ export default {
   @include md {
     // background-color: red;
     flex-basis: 100%;
+    justify-content: space-between;
+    .fa-bars {
+      font-size: 4rem;
+      color: $nav-font-color;
+    }
+    .fa-search {
+      font-size: 2.4rem;
+
+      color: $nav-font-color;
+    }
+    .fa-user {
+      font-size: 2.4rem;
+
+      color: $nav-font-color;
+    }
   }
 
   @include lg {

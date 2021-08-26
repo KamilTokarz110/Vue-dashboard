@@ -71,7 +71,7 @@
 
   .card.card--todays-shipments
     h3.card--todays-shipments__title Todays shipments
-    h2.card--todays-shipments__title 1332.32 TON
+    h2.card--todays-shipments__title.card--todays-shipments__title--big <span>1332.32 TON</span>
     .card--todays-shipments__hours
       p.card--todays-shipments__hour(
         v-for="(hour, index) in hours",
