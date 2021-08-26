@@ -159,7 +159,15 @@ export default {
     opacity: 1;
 
     color: $nav-font-color;
-
+    .fa-bars {
+      display: none;
+    }
+    .fa-search {
+      display: none;
+    }
+    .fa-user {
+      display: none;
+    }
     &__logo {
       // width: 63px;
       // height: 45px;
@@ -186,6 +194,7 @@ export default {
     }
 
     &__search {
+      display: block;
       // position: relative;
       height: 45px;
       width: 452px;
@@ -199,6 +208,7 @@ export default {
     }
 
     &__search-text {
+      display: block;
       position: absolute;
       // top: 22px;
       left: 53px;
@@ -209,23 +219,28 @@ export default {
     }
 
     &__search-container {
+      display: block;
       position: relative;
     }
 
     &__search-image {
+      display: block;
       position: absolute;
       top: 15px;
       left: 25px;
     }
 
     &__profile {
+      display: block;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 70px;
       width: 231px;
+      gap: 10px;
 
       &-info {
+        display: block;
         // background-color: green;
 
         height: 46px;
@@ -246,6 +261,7 @@ export default {
       }
 
       &-picture {
+        display: block;
         // background-color: yellow;
         flex-basis: 70px;
         height: 70px;

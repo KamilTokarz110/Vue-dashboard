@@ -2,7 +2,8 @@
 .section__main
   .card.card--track-order
     h3.card--track-order__title.card--track-order__title--md Track<br><strong class="card--track-order__title card--track-order__title--bg">Order</strong>
-    //- h2.card--track-order__title.card--track-order__title--bg Order
+    .card--track-order__picture
+      //- img.card--track-order__image(src="../assets/card--track-order.svg")
 
     .card--track-order__item
       p.card--track-order__text Tracking ID
@@ -23,12 +24,12 @@
     .card--bids__bottom
       .card--bids__item
         i.fas.fa-lock-open.card--bids__item-icon
-        //- img.card--bids__item-icon(src="../assets/auction.svg")
+
         p.card--bids__item-text Bids Available
         .card--bids__item-circle 17
       .card--bids__item
         i.fas.fa-lock.card--bids__item-icon
-        //- img.card--bids__item-icon(src="../assets/auction--closed.svg")
+
         p.card--bids__item-text Bids Closed
         .card--bids__item-circle 07
 
