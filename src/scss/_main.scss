@@ -622,6 +622,12 @@ html {
             }
         }
 
+        &__header {
+            display: flex;
+            flex-basis: 100%;
+            gap: 20px;
+        }
+
         &__title {
             flex-basis: 70%;
             color: white;
@@ -632,7 +638,7 @@ html {
             @include lg {
                 font-size: 2rem;
                 padding-top: 5px;
-                padding-left: 10px;
+                // padding-left: 10px;
                 line-height: 25px;
                 // align-self: flex-start;
             }
@@ -1000,13 +1006,16 @@ html {
             font-size: 1.6rem;
 
             @include lg {
-                font-size: 2rem;
+                font-size: 4rem;
             }
+
 
 
             &--big {
                 font-size: 2rem;
                 font-weight: bolder;
+
+
 
             }
 
@@ -1077,26 +1086,7 @@ html {
 
 
 
-            // &:nth-child(4) {
 
-
-            //     background-color: #C5A3D9;
-            // }
-
-            // &:nth-child(5) {
-
-            //     background-color: #FF9D97;
-            // }
-
-            // &:nth-child(6) {
-
-            //     background-color: #70FCBF;
-            // }
-
-            // &:nth-child(7) {
-
-            //     background-color: #F3D661;
-            // }
         }
 
         &__legend {
@@ -1163,6 +1153,10 @@ html {
             flex-basis: 100%;
             font-size: 1.6rem;
 
+            @include lg {
+                font-size: 2rem;
+            }
+
             &--big {
                 position: relative;
                 font-size: 2rem;
@@ -1182,6 +1176,7 @@ html {
     &--current-shipment {
 
         display: flex;
+        // justify-content: c;
         flex-wrap: wrap;
         // background-color: red;
 
@@ -1189,8 +1184,18 @@ html {
 
         gap: 20px;
 
+        @include md {
+            justify-content: space-evenly;
+            flex-basis: 100%;
+        }
+
         @include lg {
+            // justify-content: center;
+            // align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
             padding: 31px 31px 34px 31px;
+            // gap: 20px;
         }
 
         &__title {
@@ -1202,8 +1207,66 @@ html {
             font-weight: bold;
             font-size: 1.6rem;
 
+            @include lg {
+                font-size: 2rem;
+                width: 100%;
+            }
+
             &--big {
                 border: solid #707070 1px;
+            }
+        }
+
+        &__items {
+            @include lg {
+
+
+                display: flex;
+                // flex-direction: row;
+                // flex-wrap: wrap;
+                // align-items: center;
+                // justify-content: space-evenly;
+                width: 100%;
+                // width: 100%;
+                // gap: 20px;
+
+            }
+
+
+
+
+        }
+
+        .columnn {
+            @include lg {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 20px;
+            }
+        }
+
+        .row {
+
+            @include lg {
+                // gap: 20px;
+                // background-color: red;
+                width: 100%;
+                margin-left: 0px;
+                margin-right: 0px;
+                flex-wrap: nowrap;
+
+            }
+
+            &--top {
+                @include lg {
+
+
+                    // flex-basis: 20%;
+                    // background-color: red;
+                    // margin-bottom: 40px;
+
+                }
             }
         }
 
@@ -1215,16 +1278,89 @@ html {
             padding: 20px 20px;
             flex-basis: 100%;
 
-            background: transparent linear-gradient(54deg, #FFF2F2 70%, #DE7575 100%) 0% 0% no-repeat padding-box;
-            border: 1px solid #EED5D5;
             border-radius: 10px;
-            color: #D88787;
+
+            &--1 {
+
+
+                background: transparent linear-gradient(54deg, #FFF2F2 70%, #DE7575 100%) 0% 0% no-repeat padding-box;
+                border: 1px solid #EED5D5;
+
+                color: #D88787;
+            }
+
+            &--2 {
+
+                background: transparent linear-gradient(49deg, #EDECFF 70%, #736F9F 100%) 0% 0% no-repeat padding-box;
+                border: 1px solid #C9C7EB;
+                color: #1A0CE2;
+            }
+
+            &--3 {
+
+                background: transparent linear-gradient(55deg, #DFFEF2 70%, #6C9B88 100%) 0% 0% no-repeat padding-box;
+                border: 1px solid #B7DFCF;
+                color: #2BC98A;
+
+            }
+
+            &--4 {
+
+                background: transparent linear-gradient(48deg, #F6F0DF 70%, #F3C548 100%) 0% 0% no-repeat padding-box;
+                border: 1px solid #DBD2B9;
+                color: #CB9F26;
+
+            }
+
+            @include md {
+                flex-basis: 48%;
+            }
+
+            @include lg {
+                gap: 20px;
+                flex-basis: 50%;
+                height: 127px;
+                margin-right: 20px;
+
+            }
+
+            &-upload {
+
+
+                @include lg {
+                    // flex-basis: 20%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 15px;
+                    padding: 20px 20px;
+                    width: 30%;
+                    height: 100%;
+                    // width: 40%;
+
+                }
+
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 2px dashed #16A596;
+                border-radius: 10px;
+                opacity: 1;
+                color: #16A596;
+
+            }
+
+
+
 
 
 
             .card--current-shipment-title {
                 font-size: 1.4rem;
                 font-weight: normal;
+
+                @include lg {
+                    font-size: 1.6rem;
+                }
 
             }
 
@@ -1234,28 +1370,17 @@ html {
                 display: block;
                 font-size: 1.6rem;
                 margin-top: 5px;
+
+                @include lg {
+                    font-size: 2rem;
+                }
             }
 
-            &:nth-child(3) {
-                background: transparent linear-gradient(49deg, #EDECFF 70%, #736F9F 100%) 0% 0% no-repeat padding-box;
-                border: 1px solid #C9C7EB;
-                color: #1A0CE2;
 
 
 
-            }
 
-            &:nth-child(4) {
-                background: transparent linear-gradient(55deg, #DFFEF2 70%, #6C9B88 100%) 0% 0% no-repeat padding-box;
-                border: 1px solid #B7DFCF;
-                color: #2BC98A;
-            }
 
-            &:nth-child(5) {
-                background: transparent linear-gradient(48deg, #F6F0DF 70%, #F3C548 100%) 0% 0% no-repeat padding-box;
-                border: 1px solid #DBD2B9;
-                color: #CB9F26;
-            }
 
             &:nth-child(6) {
                 background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -1264,8 +1389,17 @@ html {
                 opacity: 1;
                 color: #16A596;
 
+                @include md {
+                    align-items: center;
+                    justify-content: center;
+                    flex-basis: 100%;
+                }
 
+                @include lg {
+                    height: 50%;
+                }
             }
+
 
 
 
@@ -1284,37 +1418,15 @@ html {
             border-radius: 7px;
             opacity: 1;
 
-
-        }
-
-        @include md {
-            justify-content: space-evenly;
-            flex-basis: 100%;
-
-
-            &__item {
-                flex-basis: 48%;
-
-                &:nth-child(6) {
-                    align-items: center;
-                    justify-content: center;
-                    flex-basis: 100%;
-
-
-
-                }
-            }
-
-            &__link {
+            @include md {
                 font-size: 1.6rem;
 
                 padding: 10px 10px;
-
-
-
-
             }
+
+
         }
+
 
         @include lg {
             flex-basis: calc((100% / 12) * 8 - #{$flex-gap});
