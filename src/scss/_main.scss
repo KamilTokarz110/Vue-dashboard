@@ -552,7 +552,7 @@ html {
         }
 
         @include lg {
-            flex-basis: calc((100% / 12) * 4 - #{$flex-gap});
+            flex-basis: calc((100% / 12) * 4.4 - #{$flex-gap});
             gap: 14px;
             padding: 31px 34px;
 
@@ -752,7 +752,7 @@ html {
         }
 
         @include lg {
-            flex-basis: calc((100% / 12) * 3 - #{$flex-gap});
+            flex-basis: calc((100% / 12) * 2.8 - #{$flex-gap});
             padding: 29px 51px 38px 50px;
             gap: 0px 0px;
 
@@ -982,7 +982,7 @@ html {
         }
 
         @include lg {
-            flex-basis: calc((100% / 12) * 2.9 - #{$flex-gap});
+            flex-basis: calc((100% / 12) * 2.7 - #{$flex-gap});
         }
     }
 
@@ -1169,7 +1169,7 @@ html {
 
 
         @include lg {
-            flex-basis: calc((100% / 12) * 4 - #{$flex-gap});
+            flex-basis: calc((100% / 12) * 4.4 - #{$flex-gap});
         }
     }
 
@@ -1429,7 +1429,7 @@ html {
 
 
         @include lg {
-            flex-basis: calc((100% / 12) * 8 - #{$flex-gap});
+            flex-basis: calc((100% / 12) * 7.8 - #{$flex-gap});
             // flex-basis: 50%;
         }
     }
