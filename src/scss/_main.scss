@@ -1015,6 +1015,9 @@ html {
                 font-size: 2rem;
                 font-weight: bolder;
 
+                @include lg {
+                    font-size: 4.7rem;
+                }
 
 
             }
@@ -1161,6 +1164,11 @@ html {
                 position: relative;
                 font-size: 2rem;
                 font-weight: bold;
+
+                @include lg {
+                    font-size: 3.5rem;
+                    font-weight: bolder;
+                }
 
 
             }
@@ -1417,6 +1425,7 @@ html {
             border: 2px solid #16A596;
             border-radius: 7px;
             opacity: 1;
+            cursor: pointer;
 
             @include md {
                 font-size: 1.6rem;
