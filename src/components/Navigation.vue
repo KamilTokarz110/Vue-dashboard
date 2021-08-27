@@ -149,7 +149,7 @@ export default {
     justify-content: space-between;
     align-items: center;
 
-    margin: 20px 0px 50px 0px;
+    margin: 80px 0px 50px 0px;
     padding: 40px;
     height: 85px;
 

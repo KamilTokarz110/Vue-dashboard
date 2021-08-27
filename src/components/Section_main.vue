@@ -35,10 +35,11 @@
         .card--bids__item-circle 07
 
   .card.card--statistics
-    h3.card--statistics__title Statistics
-    .card--statistics__dropdown
-      p.card--statistics__dropdown-text This Week
-      i.fas.fa-chevron-down
+    .card--statistics__header
+      h3.card--statistics__title Statistics
+      .card--statistics__dropdown
+        p.card--statistics__dropdown-text This Week
+        i.fas.fa-chevron-down
 
     .card--statistics__item 
       .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-1 

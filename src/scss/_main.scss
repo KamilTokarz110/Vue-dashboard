@@ -383,6 +383,11 @@ html {
             color: $nav-font-color;
 
 
+            @include lg {
+                font-size: 2rem;
+                margin-bottom: 10px;
+
+            }
 
 
             &--bg {
@@ -394,8 +399,9 @@ html {
 
                 @include lg {
                     font-size: 3rem;
-                    // margin-top: 30px;
-                    // padding-top: 5px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    margin-top: 5px;
 
                 }
             }
@@ -412,6 +418,9 @@ html {
             border-radius: 7px;
             opacity: 1;
 
+            @include lg {
+                height: 45px;
+            }
 
 
 
@@ -441,6 +450,10 @@ html {
             &:nth-child(2) {
                 border-right: 2px solid #aab6cc;
                 border-left: 2px solid #aab6cc;
+
+                @include lg {
+                    line-height: 45px;
+                }
 
             }
 
@@ -534,6 +547,20 @@ html {
                 font-size: 1.2rem;
                 opacity: 0.5;
 
+                @include lg {
+                    flex-basis: 100%;
+
+
+
+
+                    line-height: 45px;
+
+
+
+                    font-size: 1.6rem;
+
+                }
+
                 &:nth-child(2) {
 
                     line-height: 38px;
@@ -557,47 +584,13 @@ html {
 
         @include lg {
             flex-basis: calc((100% / 12) * 4.4 - #{$flex-gap});
-            gap: 14px;
+            gap: 0px;
             padding: 31px 34px;
 
 
-            &__item {
-
-                height: 45px;
-            }
-
-            &__text {
-                flex-basis: 100%;
 
 
 
-
-                line-height: 45px;
-
-
-
-                font-size: 1.6rem;
-
-
-                &:nth-child(2) {
-
-                    line-height: 45px;
-
-                }
-            }
-
-            &__title {
-
-                margin-bottom: 10px;
-
-                &--bg {
-
-
-                    margin-top: 5px;
-                }
-
-
-            }
         }
     }
 
@@ -760,6 +753,12 @@ html {
             padding: 29px 51px 38px 50px;
             gap: 0px 0px;
 
+        }
+
+        &__header {
+            display: flex;
+            // flex-wrap: wrap;
+            flex-basis: 100%;
         }
 
         &__title {
