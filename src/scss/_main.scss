@@ -2,12 +2,14 @@ html {
     font-family: arial, sans-serif;
     background-color: $main-color;
     font-size: 10px;
+
 }
+
 
 
 .container {
     @include lg {
-        max-width: 1800px;
+        max-width: 1780px;
 
     }
 
@@ -278,6 +280,11 @@ html {
 
     margin: 10px 0 10px 0;
 
+    @include lg {
+        margin: 0 0 0 0;
+        justify-content: space-between
+    }
+
 
 
 }
@@ -302,15 +309,18 @@ html {
     @include lg {
         // background-color: yellowgreen;
         flex-basis: calc((100% /12) * 6 - #{$flex-gap});
+        //zmienic
+        padding: 0px 0px;
     }
 
 
 
     &--track-order {
+
         position: relative;
         flex-wrap: wrap;
         font-size: 1.4rem;
-        padding: 20px 20px;
+        padding: 20px 20px 20px 20px;
         gap: 10px;
         // background-image: url("../assets/card--track-order.svg");
         // background-repeat: no-repeat;
@@ -322,20 +332,28 @@ html {
 
         text-overflow: ellipsis;
 
+        @include lg {
+
+            font-size: 1.6rem;
+            padding: 25px 34px 34px 34px;
+
+        }
+
         &__picture {
             position: absolute;
             top: 4%;
-            right: 6%;
+            right: 5%;
             background-image: url("../assets/card--track-order.svg");
             background-size: 100%;
             background-repeat: no-repeat;
-            width: 150px;
-            height: 150px;
+            width: 130px;
+            height: 130px;
 
             @include md {
-                width: 180px;
-                height: 180px;
-                right: 20px;
+                width: 140px;
+                height: 140px;
+                right: 18px;
+                top: 2px;
             }
 
 
@@ -345,8 +363,8 @@ html {
 
                 width: 200px;
                 height: 200px;
-                right: 20px;
-                top: 20px;
+                right: 30px;
+                top: 30px;
             }
 
             @media(max-width: 1180px) {
@@ -363,11 +381,25 @@ html {
             flex-basis: 100%;
             color: $nav-font-color;
 
+
+            @include lg {
+                font-size: 2rem;
+
+            }
+
             &--bg {
                 display: block;
                 font-weight: bold;
                 font-size: 2rem;
                 margin-top: 10px;
+                margin-bottom: 10px;
+
+                @include lg {
+                    font-size: 3rem;
+                    // margin-top: 30px;
+                    // padding-top: 5px;
+
+                }
             }
 
         }
@@ -385,7 +417,6 @@ html {
 
 
 
-
         }
 
         &__text {
@@ -398,6 +429,10 @@ html {
 
             font-size: 1.2rem;
             opacity: 0.5;
+
+
+
+
 
             @media (min-width: 375px) {
                 line-height: 35px;
@@ -424,6 +459,11 @@ html {
             // position: relative;
             flex-basis: 100%;
             gap: 10px;
+
+            @include lg {
+                gap: 40px;
+            }
+
 
             @media (min-width: 425px) {
                 justify-content: space-between;
@@ -470,6 +510,7 @@ html {
 
                 margin-bottom: 10px;
 
+
                 &--bg {
 
 
@@ -512,6 +553,47 @@ html {
 
         @include lg {
             flex-basis: calc((100% / 12) * 4 - #{$flex-gap});
+            gap: 14px;
+            padding: 31px 34px;
+
+
+            &__item {
+
+                height: 45px;
+            }
+
+            &__text {
+                flex-basis: 100%;
+
+
+
+
+                line-height: 45px;
+
+
+
+                font-size: 1.6rem;
+
+
+                &:nth-child(2) {
+
+                    line-height: 45px;
+
+                }
+            }
+
+            &__title {
+
+                margin-bottom: 10px;
+
+                &--bg {
+
+
+                    margin-top: 5px;
+                }
+
+
+            }
         }
     }
 
@@ -527,9 +609,17 @@ html {
 
         padding: 20px 20px;
 
+        @include lg {
+            padding: 25px 25px;
+        }
+
         &__image {
             align-self: flex-start;
+
             // flex-basis: 30%;
+            @include lg {
+                align-self: flex-start;
+            }
         }
 
         &__title {
@@ -538,6 +628,14 @@ html {
             text-align: left;
             padding-top: 10px;
             font-size: 1.6rem;
+
+            @include lg {
+                font-size: 2rem;
+                padding-top: 5px;
+                padding-left: 10px;
+                line-height: 25px;
+                // align-self: flex-start;
+            }
         }
 
         &__bottom {
@@ -547,6 +645,10 @@ html {
             align-items: flex-end;
             gap: 10px;
             flex-basis: 100%;
+
+            @include lg {
+                gap: 0px;
+            }
         }
 
         &__item {
@@ -566,6 +668,10 @@ html {
             border-radius: 10px;
             opacity: 1;
 
+            @include lg {
+                font-size: 1.4rem;
+            }
+
 
             &-circle {
                 width: 35px;
@@ -578,7 +684,14 @@ html {
                 color: #d4887b;
                 font-size: 1.4rem;
                 font-weight: bold;
+
                 // padding: 5px 5px;
+                @include lg {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 2rem;
+                }
             }
 
         }
@@ -611,7 +724,7 @@ html {
         }
 
         @include lg {
-            flex-basis: calc((100% / 12) * 2 - #{$flex-gap});
+            flex-basis: calc((100% / 12) * 2.2 - #{$flex-gap});
         }
     }
 
@@ -620,18 +733,35 @@ html {
         flex-wrap: wrap;
 
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
         background-color: $statistics-card-color;
 
         gap: 20px 0px;
         font-size: 1.4rem;
-        padding: 5px 25px 45px 25px;
+        padding: 29px 25px 45px 25px;
+
+        @include md {
+            flex-basis: calc((100% / 12) * 6 - #{$flex-gap});
+
+        }
+
+        @include lg {
+            flex-basis: calc((100% / 12) * 3 - #{$flex-gap});
+            padding: 29px 51px 38px 50px;
+            gap: 0px 0px;
+
+        }
 
         &__title {
             color: #FFFFFF;
             flex-basis: 50%;
             font-size: 1.6rem;
 
+            @include lg {
+                font-size: 2rem;
+                padding-top: 5px;
+
+            }
         }
 
         &__dropdown {
@@ -652,6 +782,13 @@ html {
 
             background: #FFFFFF 0% 0% no-repeat padding-box;
             border-radius: 5px;
+
+            @include lg {
+                padding: 5px 5px;
+                width: 126px;
+                height: 36px;
+                justify-content: space-evenly;
+            }
         }
 
         &__item {
@@ -670,6 +807,7 @@ html {
 
             gap: 20px 0px;
 
+            @include lg {}
 
 
             &-text {
@@ -727,14 +865,6 @@ html {
 
         }
 
-        @include md {
-            flex-basis: calc((100% / 12) * 6 - #{$flex-gap});
-
-        }
-
-        @include lg {
-            flex-basis: calc((100% / 12) * 3 - #{$flex-gap});
-        }
     }
 
     &--calendar {
@@ -744,6 +874,10 @@ html {
         gap: 10px;
         font-size: 1.4rem;
         color: $nav-font-color;
+
+        @include lg {
+            padding: 24px;
+        }
 
         .line {
             // gap: 24px;
@@ -782,10 +916,13 @@ html {
             font-weight: bold;
             gap: 5px 0px;
 
+
+
             &--days {
 
 
                 justify-content: space-between;
+
 
             }
         }
@@ -801,6 +938,13 @@ html {
             opacity: 0.5;
 
 
+            @include lg {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+
+            }
+
             &:nth-child(10) {
                 color: white;
                 background: #16A596 0% 0% no-repeat padding-box;
@@ -813,6 +957,12 @@ html {
                 // padding: 10px 5px;
                 opacity: 1;
                 font-weight: bold;
+
+                @include lg {
+                    font-weight: normal;
+                    font-size: 1.4rem;
+
+                }
             }
         }
 
@@ -826,7 +976,7 @@ html {
         }
 
         @include lg {
-            flex-basis: calc((100% / 12) * 3 - #{$flex-gap});
+            flex-basis: calc((100% / 12) * 2.9 - #{$flex-gap});
         }
     }
 
@@ -834,6 +984,9 @@ html {
         display: flex;
         flex-wrap: wrap;
 
+        @include lg {
+            padding: 31px 31px 34px 31px;
+        }
 
 
 
@@ -846,11 +999,17 @@ html {
             flex-basis: 100%;
             font-size: 1.6rem;
 
+            @include lg {
+                font-size: 2rem;
+            }
+
+
             &--big {
                 font-size: 2rem;
                 font-weight: bolder;
 
             }
+
 
         }
 
@@ -1030,6 +1189,10 @@ html {
 
         gap: 20px;
 
+        @include lg {
+            padding: 31px 31px 34px 31px;
+        }
+
         &__title {
 
             flex-basis: 100%;
@@ -1168,7 +1331,7 @@ html {
 
     &__button {
         width: 150px;
-        height: 35px;
+        height: 45px;
         background: $active-color 0% 0% no-repeat padding-box;
         border-radius: 7px;
         opacity: 1;
@@ -1179,11 +1342,18 @@ html {
         font-size: 1.4rem;
         font-weight: bold;
         text-align: center;
-        line-height: 35px;
+        line-height: 45px;
         cursor: pointer;
 
         @include md {
             margin-top: 30px;
+        }
+
+        @include lg {
+            margin-top: 0px;
+            font-size: 1.6rem;
+            font-weight: bold;
+
         }
 
         &--filters {

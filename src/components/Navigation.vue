@@ -223,7 +223,7 @@ export default {
       height: 45px;
       width: 452px;
 
-      padding: 20px 7px;
+      padding: 20px 50px;
 
       background: #ffffff 0% 0% no-repeat padding-box;
       border: 1px solid #aab6cc;
@@ -234,7 +234,6 @@ export default {
         font-size: 1.6rem;
         color: $nav-font-color;
         opacity: 1;
-        padding: 20px 15px 20px 50px;
       }
     }
 
