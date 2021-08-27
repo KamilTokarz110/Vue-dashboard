@@ -123,7 +123,7 @@
       .card--current-shipment__item-upload
         img.card--current-shipment__image(src="../assets/files.svg")
         a.card--current-shipment__link Upload documents
-  .card.card--cargo-shipment cargo-shipment
+  //- .card.card--cargo-shipment cargo-shipment
 </template>
 
 <script>

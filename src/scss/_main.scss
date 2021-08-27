@@ -11,6 +11,7 @@ html {
     @include lg {
         max-width: 1780px;
 
+
     }
 
 
@@ -382,10 +383,7 @@ html {
             color: $nav-font-color;
 
 
-            @include lg {
-                font-size: 2rem;
 
-            }
 
             &--bg {
                 display: block;
@@ -509,6 +507,12 @@ html {
             &__title {
 
                 margin-bottom: 10px;
+
+                @include lg {
+                    // font-size: 2rem;
+                    margin-bottom: 0;
+
+                }
 
 
                 &--bg {
@@ -1191,6 +1195,7 @@ html {
         // font-size: 1.4rem;
 
         gap: 20px;
+        // margin-bottom: 20px;
 
         @include md {
             justify-content: space-evenly;
@@ -1226,11 +1231,14 @@ html {
         }
 
         &__items {
+            display: flex;
+            flex-direction: column;
+
             @include lg {
 
 
                 display: flex;
-                // flex-direction: row;
+                flex-direction: row;
                 // flex-wrap: wrap;
                 // align-items: center;
                 // justify-content: space-evenly;
@@ -1246,11 +1254,15 @@ html {
         }
 
         .columnn {
+            flex-basis: 100%;
+            padding: 10px 10px;
+
             @include lg {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
                 gap: 20px;
+                padding: 0 0;
             }
         }
 
@@ -1287,6 +1299,7 @@ html {
             flex-basis: 100%;
 
             border-radius: 10px;
+            margin-bottom: 15px;
 
             &--1 {
 
@@ -1329,11 +1342,15 @@ html {
                 flex-basis: 50%;
                 height: 127px;
                 margin-right: 20px;
+                margin-bottom: 0px;
 
             }
 
             &-upload {
-
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px 20px;
 
                 @include lg {
                     // flex-basis: 20%;
@@ -1365,9 +1382,11 @@ html {
             .card--current-shipment-title {
                 font-size: 1.4rem;
                 font-weight: normal;
+                text-align: center;
 
                 @include lg {
                     font-size: 1.6rem;
+                    text-align: left;
                 }
 
             }
