@@ -309,7 +309,7 @@ html {
 
     @include lg {
         // background-color: yellowgreen;
-        flex-basis: calc((100% /12) * 6 - #{$flex-gap});
+        // flex-basis: calc((100% /12) * 6 - #{$flex-gap});
         //zmienic
         padding: 0px 0px;
     }
@@ -582,6 +582,8 @@ html {
 
         }
 
+
+
         @include lg {
             flex-basis: calc((100% / 12) * 4.4 - #{$flex-gap});
             gap: 0px;
@@ -592,6 +594,8 @@ html {
 
 
         }
+
+
     }
 
     &--bids {
@@ -605,6 +609,7 @@ html {
         gap: 50px 10px;
 
         padding: 20px 20px;
+
 
         @include lg {
             padding: 25px 25px;
@@ -743,6 +748,8 @@ html {
         font-size: 1.4rem;
         padding: 29px 25px 45px 25px;
 
+
+
         @include md {
             flex-basis: calc((100% / 12) * 6 - #{$flex-gap});
 
@@ -752,6 +759,8 @@ html {
             flex-basis: calc((100% / 12) * 2.8 - #{$flex-gap});
             padding: 29px 51px 38px 50px;
             gap: 0px 0px;
+
+
 
         }
 
