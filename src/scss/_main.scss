@@ -724,12 +724,13 @@ html {
     @include md {
       flex-basis: calc((100% / 12) * 6 - #{$flex-gap});
 
+
     }
 
     @include lg {
       flex-basis: calc((100% / 12) * 3);
       max-width: calc((100% / 12) * 3);
-      padding: 29px 51px 38px 50px;
+      padding: 29px 20px 45px 20px;
       gap: 0px 0px;
 
 
