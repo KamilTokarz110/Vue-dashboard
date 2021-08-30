@@ -6,7 +6,7 @@
       //- img.card--track-order__image(src="../assets/card--track-order.svg")
 
     .card--track-order__item
-      p.card--track-order__text Tracking ID
+      p.card--track-order__text.is-active Tracking ID
       p.card--track-order__text Order ID/Ref ID
       p.card--track-order__text LTL Shipment
     .card--track-order__input-container
@@ -41,28 +41,28 @@
         p.card--statistics__dropdown-text This Week
         i.fas.fa-chevron-down
 
-    .card--statistics__item 
-      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-1 
+    .card--statistics__item
+      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-1
       p.card--statistics__item-text Jan
     .card--statistics__item
-      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-2 
+      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-2
       p.card--statistics__item-text Feb
     .card--statistics__item
       .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-3
       p.card--statistics__item-text Mar
     .card--statistics__item
-      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-4 
+      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-4
       p.card--statistics__item-text Apr
     .card--statistics__item
       .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-5
       p.card--statistics__item-text May
     .card--statistics__item
-      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-6 
+      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-6
       p.card--statistics__item-text Jun
     .card--statistics__item
-      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-7 
+      .card--statistics__item.card--statistics__item--progress.card--statistics__item--progress-7
       p.card--statistics__item-text Jul
-  .card.card--calendar 
+  .card.card--calendar
     .card--calendar__header
       i.fas.fa-chevron-left
       p.card--calendar__year August 2021
@@ -113,7 +113,7 @@
           .card--current-shipment__item.card--current-shipment__item--2
             img.card--current-shipment__image(src="../assets/Not_included.svg")
             h3.card--current-shipment-title Include cost of fuel in your quote <br> <strong>Not Included</strong>
-        .row 
+        .row
           .card--current-shipment__item.card--current-shipment__item--3
             img.card--current-shipment__image(src="../assets/Cash.svg")
             h3.card--current-shipment-title Payment Terms <br> <strong>Cash</strong>
