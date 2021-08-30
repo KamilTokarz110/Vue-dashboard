@@ -738,7 +738,7 @@ html {
     @include xl {
       flex-basis: calc((100% / 12) * 3 - 30px);
       max-width: calc((100% / 12) * 3 - 30px);
-      padding: 29px 51px 38px 50px;
+      padding: 29px 51px 29px 51px;
       gap: 0px 0px;
 
 
@@ -780,6 +780,7 @@ html {
 
       background: #FFFFFF 0% 0% no-repeat padding-box;
       border-radius: 5px;
+      cursor: pointer;
 
       @include lg {
         display: none;
@@ -823,6 +824,10 @@ html {
         font-weight: bold;
         letter-spacing: 0px;
         color: #FFFFFF;
+
+        @include lg {
+          font-size: 1.6rem;
+        }
 
       }
 
@@ -880,6 +885,7 @@ html {
 
     @include lg {
       padding: 24px;
+      gap: 0;
     }
 
     .line {
@@ -890,6 +896,10 @@ html {
       opacity: 1;
       margin-top: 12px;
       margin-bottom: 6px;
+
+      @include lg {
+        margin-top: 24px;
+      }
     }
 
     &__header {
@@ -1014,7 +1024,7 @@ html {
       font-size: 1.6rem;
 
       @include lg {
-        font-size: 4rem;
+        font-size: 2rem;
       }
 
 
@@ -1023,7 +1033,7 @@ html {
         font-weight: bolder;
 
         @include lg {
-          font-size: 4.7rem;
+          font-size: 3.5rem;
         }
 
 
@@ -1226,6 +1236,7 @@ html {
       @include lg {
         font-size: 2rem;
         width: 100%;
+        margin-bottom: 42px;
 
       }
 
@@ -1458,6 +1469,14 @@ html {
       border-radius: 7px;
       opacity: 1;
       cursor: pointer;
+      transition: .4s;
+
+      &:hover {
+        color: white;
+        background-color: rgba(#16A596, .4);
+        border: 2px solid white;
+        border-radius: 8px;
+      }
 
       @include md {
         font-size: 1.6rem;
@@ -1481,8 +1500,105 @@ html {
   }
 
   &--cargo-shipment {
+    display: none;
+
     @include md {
-      background-color: red;
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 100%;
+      color: $nav-font-color;
+    }
+
+    @include lg {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: 100%;
+
+      padding: 31px 34px;
+      color: $nav-font-color;
+
+    }
+
+    &__title {
+      @include md {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+      }
+
+      @include lg {
+        color: $nav-font-color;
+        font-size: 2rem;
+        margin-bottom: 29px;
+      }
+
+
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-basis: 100%;
+      padding: 13px 20px;
+
+      list-style: none;
+      background: #FFF2D5 0% 0% no-repeat padding-box;
+      border-radius: 4px;
+
+
+      @include md {}
+
+      @include lg {}
+
+      &--info {
+        background: none;
+        border-radius: 0px;
+
+        // text-align: left;
+        @include lg {}
+
+
+      }
+    }
+
+    &__item {
+      flex-basis: 14%;
+      text-align: left;
+      font-size: 1.6rem;
+
+      // flex-basis: 100%;
+      @include lg {
+        flex-basis: 14%;
+        text-align: left;
+        // flex-basis: 100%;
+      }
+
+
+      &--bold {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: left;
+
+        @include lg {
+          font-size: 1.8rem;
+          font-weight: bold;
+          text-align: left;
+        }
+
+      }
+
+      &-info {
+        font-size: 1.6rem;
+        text-align: left;
+        flex-basis: 14%;
+
+        @include lg {}
+
+      }
+    }
+
+    @include md {
+      // background-color: red;
       flex-basis: 100%;
     }
   }
@@ -1526,6 +1642,12 @@ html {
       border-radius: 0px;
       border: none;
       text-align: center;
+      transition: .3s;
+
+      &:hover {
+        color: rgba($active-color, .4);
+        background: none;
+      }
 
       @include lg {
         text-align: left;
