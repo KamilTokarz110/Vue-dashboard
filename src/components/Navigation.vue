@@ -319,6 +319,7 @@
 					text-align: right;
 					opacity: 0.5;
 					padding-top: 0px;
+					cursor:pointer;
 				}
 				
 				&-picture {
