@@ -15,6 +15,10 @@ html {
 
   }
 
+  // @include xl {
+  //   width: 1940px;
+  // }
+
 
 }
 
@@ -974,6 +978,7 @@ html {
         border: 2px solid white;
         border-radius: 8px;
         transition: .2s;
+
       }
 
 
@@ -1013,7 +1018,7 @@ html {
     }
 
     @include xl {
-      flex-basis: calc((100% / 12) * 3 - 20px);
+      flex-basis: calc((100% / 12) * 4 - 20px);
       max-width: calc((100% / 12) * 3 - 20px);
     }
   }
@@ -1040,10 +1045,13 @@ html {
 
 
       &--big {
+        // display: block;
         font-size: 2rem;
         font-weight: bolder;
 
         @include lg {
+          margin-top: -20px;
+          display: block;
           font-size: 3.5rem;
         }
 
@@ -1204,8 +1212,10 @@ html {
     }
 
     @include xl {
-      flex-basis: calc((100% / 12) * 5 - #{$flex-gap});
-      max-width: calc((100% / 12) * 5 - #{$flex-gap});
+      // flex-basis: calc((100% / 12) * 5 - #{$flex-gap});
+      // max-width: calc((100% / 12) * 5 - #{$flex-gap});
+      flex-basis: calc((100% / 12) * 4 - #{$flex-gap});
+      max-width: calc((100% / 12) * 4 - #{$flex-gap});
     }
   }
 
@@ -1247,7 +1257,7 @@ html {
       @include lg {
         font-size: 2rem;
         width: 100%;
-        margin-bottom: 42px;
+        margin-bottom: 22px;
 
       }
 
@@ -1505,7 +1515,7 @@ html {
     }
 
     @include xl {
-      flex-basis: calc((100% / 12) * 7);
+      flex-basis: calc((100% / 12) * 8);
       // flex-basis: 50%;
     }
   }
@@ -1663,6 +1673,7 @@ html {
       @include lg {
         text-align: left;
         margin-top: auto;
+        margin-left: 0;
 
       }
 
