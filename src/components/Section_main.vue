@@ -1,8 +1,10 @@
 <template lang="pug">
 .section__main
   CTrackOrder
-  CBids
-  CStatistics
+  CBids(title="", logo="../assets/bids_logo.svg ")
+    template(v-slot:title) Naughty<br>Dog
+
+  CStatistics 
   CCalendar
   CTodaysShipments
   CCurrentShipment

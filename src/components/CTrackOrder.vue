@@ -13,12 +13,20 @@
       name="search",
       placeholder="Enter Order ID/Ref ID"
     )
-
-    a.card__button.card__button--filters More Filters
-    a.card__button Track
+    //- CTrackButton(title="Name")
+    CTrackButton.card__button.card__button--filters(title="Filter More")
+      template(v-slot:title) Button
+    CTrackButton(title="Track")
+      template(v-slot:title) Button_2
 </template>
 <script>
+import CTrackButton from "./CTrackButton.vue";
+import CButtonFilters from "./CButtonFilters.vue";
 export default {
   name: "CTrackOrder",
+  components: {
+    CTrackButton,
+    CButtonFilters,
+  },
 };
 </script>

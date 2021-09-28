@@ -26,27 +26,5 @@
 <script>
 export default {
   name: "CCurrentShipment",
-  data() {
-    return {
-      cargos: [
-        "SL No",
-        "Shipper",
-        "Ready Time",
-        "Destination",
-        "Consignee",
-        "Need Time",
-        "Distance",
-      ],
-      informations: [
-        "50265",
-        "Fireflies",
-        "12:00 (IST)",
-        "12:00 (IST)",
-        "31224 Port",
-        "15:00 (IST)",
-        "---",
-      ],
-    };
-  },
 };
 </script>

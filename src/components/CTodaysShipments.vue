@@ -7,15 +7,20 @@
       v-for="(hour, index) in hours",
       :key="index"
     ) {{ hour }}
-
-  .card--todays-shipments__item
-    .card--todays-shipments__item-color.card--todays-shipments__item-color--1
-  .card--todays-shipments__item
-    .card--todays-shipments__item-color.card--todays-shipments__item-color--2
-  .card--todays-shipments__item
-    .card--todays-shipments__item-color.card--todays-shipments__item-color--3
-  .card--todays-shipments__item
-    .card--todays-shipments__item-color.card--todays-shipments__item-color--4
+  CTodaysShipmentBar
+    template(v-slot:color)
+      .card--todays-shipments__item-color.card--todays-shipments__item-color--1
+  //- .card--todays-shipments__item
+  //-   .card--todays-shipments__item-color.card--todays-shipments__item-color--1
+  CTodaysShipmentBar
+    template(v-slot:color)
+      .card--todays-shipments__item-color.card--todays-shipments__item-color--2
+  CTodaysShipmentBar
+    template(v-slot:color)
+      .card--todays-shipments__item-color.card--todays-shipments__item-color--3
+  CTodaysShipmentBar
+    template(v-slot:color)
+      .card--todays-shipments__item-color.card--todays-shipments__item-color--4
   .card--todays-shipments__legend
     .card--todays-shipments__legend-item
       .card--todays-shipments__legend-item-color.card--todays-shipments__legend-item-color--1
@@ -32,7 +37,11 @@
 </template>
 
 <script>
+import CTodaysShipmentBar from "./CTodaysShipmentBar.vue";
 export default {
+  components: {
+    CTodaysShipmentBar,
+  },
   name: "CTodaysShipments",
   data() {
     return {
